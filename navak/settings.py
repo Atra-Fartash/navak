@@ -136,3 +136,5 @@ REST_FRAMEWORK = {
         'rest_framework.renderers.JSONRenderer',
     ]
 }
+
+OTP_LIFETIME = 180
