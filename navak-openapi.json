@@ -1,0 +1,560 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "navak",
+    "description": "",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/product/electronic-book-list-create": {
+      "get": {
+        "summary": "electronic-book-list",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "electronic_book_list"
+      },
+      "post": {
+        "summary": "electronic-book-create",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "electronic_book_create"
+      }
+    },
+    "/product/electronic-book-retrieve-update-destroy/%3Cstr:pk%3E": {
+      "get": {
+        "summary": "electronic-book-retrieve",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "electronic_book_retrieve"
+      },
+      "patch": {
+        "summary": "electronic-book-update",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "electronic_book_update"
+      },
+      "delete": {
+        "summary": "electronic-book-destroy",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "electronic_book_destroy"
+      }
+    },
+    "/product/audio-book-list-create": {
+      "get": {
+        "summary": "audio-book-list",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "audio_book_list"
+      },
+      "post": {
+        "summary": "audio-book-create",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "audio_book_create"
+      }
+    },
+    "/product/audio-book-retrieve-update-destroy/%3Cstr:pk%3E": {
+      "get": {
+        "summary": "audio-book-retrieve",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "audio_book_retrieve"
+      },
+      "patch": {
+        "summary": "audio-book-update",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "audio_book_update"
+      },
+      "delete": {
+        "summary": "audio-book-destroy",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "audio_book_destroy"
+      }
+    },
+    "/product/podcast-list-create": {
+      "get": {
+        "summary": "podcast-list",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "podcast_list"
+      },
+      "post": {
+        "summary": "podcast-create",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "podcast_create"
+      }
+    },
+    "/product/podcast-retrieve-update-destroy/%3Cstr:pk%3E": {
+      "get": {
+        "summary": "podcast-retrieve",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "podcast_retrieve"
+      },
+      "patch": {
+        "summary": "podcast-update",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "podcast_update"
+      },
+      "delete": {
+        "summary": "podcast-destroy",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "podcast_destroy"
+      }
+    },
+    "/product/category-list-create": {
+      "get": {
+        "summary": "category-list",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "category_list"
+      },
+      "post": {
+        "summary": "category-create",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "category_create"
+      }
+    },
+    "/product/category-retrieve-update-destroy/%3Cstr:pk%3E": {
+      "get": {
+        "summary": "category-retrieve",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "category_retrieve"
+      },
+      "patch": {
+        "summary": "category-update",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "category_update"
+      },
+      "delete": {
+        "summary": "category-destroy",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "category_destroy"
+      }
+    },
+    "/product/publisher-list-create": {
+      "get": {
+        "summary": "publisher-list",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "publisher_list"
+      },
+      "post": {
+        "summary": "publisher-create",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "publisher_create"
+      }
+    },
+    "/product/publisher-retrieve-update-destroy/%3Cstr:pk%3E": {
+      "get": {
+        "summary": "publisher-retrieve",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "publisher_retrieve"
+      },
+      "patch": {
+        "summary": "publisher-update",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "publisher_update"
+      },
+      "delete": {
+        "summary": "publisher-destroy",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "publisher_destroy"
+      }
+    },
+    "/product/author-list-create": {
+      "get": {
+        "summary": "author-list",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "author_list"
+      },
+      "post": {
+        "summary": "author-create",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "author_create"
+      }
+    },
+    "/product/author-retrieve-update-destroy/%3Cstr:pk%3E": {
+      "get": {
+        "summary": "author-retrieve",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "author_retrieve"
+      },
+      "patch": {
+        "summary": "author-update",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "author_update"
+      },
+      "delete": {
+        "summary": "author-destroy",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "author_destroy"
+      }
+    },
+    "/product/translator-list-create": {
+      "get": {
+        "summary": "translator-list",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "translator_list"
+      },
+      "post": {
+        "summary": "translator-create",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "translator_create"
+      }
+    },
+    "/product/translator-retrieve-update-destroy/%3Cstr:pk%3E": {
+      "get": {
+        "summary": "translator-retrieve",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "translator_retrieve"
+      },
+      "patch": {
+        "summary": "translator-update",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "translator_update"
+      },
+      "delete": {
+        "summary": "translator-destroy",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "translator_destroy"
+      }
+    },
+    "/product/narrator-list-create": {
+      "get": {
+        "summary": "narrator-list",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "narrator_list"
+      },
+      "post": {
+        "summary": "narrator-create",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "narrator_create"
+      }
+    },
+    "/product/narrator-retrieve-update-destroy/%3Cstr:pk%3E": {
+      "get": {
+        "summary": "narrator-retrieve",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "narrator_retrieve"
+      },
+      "patch": {
+        "summary": "narrator-update",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "narrator_update"
+      },
+      "delete": {
+        "summary": "narrator-destroy",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "narrator_destroy"
+      }
+    },
+    "/product/comment-list-create": {
+      "get": {
+        "summary": "comment-list",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "comment_list"
+      },
+      "post": {
+        "summary": "comment-create",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "comment_create"
+      }
+    },
+    "/product/comment-retrieve-update-destroy/%3Cstr:pk%3E": {
+      "get": {
+        "summary": "comment-retrieve",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "comment_retrieve"
+      },
+      "patch": {
+        "summary": "comment-update",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "comment_update"
+      },
+      "delete": {
+        "summary": "comment-destroy",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "comment_destroy"
+      }
+    },
+    "/basket/add-basket-item": {
+      "post": {
+        "summary": "add-basket-item",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "add_basket_item"
+      }
+    },
+    "/basket/basket-item-list": {
+      "get": {
+        "summary": "basket-item-list",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "basket_item_list"
+      }
+    },
+    "/basket/delete-basket-item/%3Cstr:pk%3E": {
+      "delete": {
+        "summary": "delete-baskte-item",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "delete_baskte_item"
+      }
+    },
+    "/basket/discount/": {
+      "post": {
+        "summary": "discount",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "discount"
+      }
+    },
+    "/account/profile-list-create": {
+      "get": {
+        "summary": "profile-list",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "profile_list"
+      },
+      "post": {
+        "summary": "profile-create",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "profile_create"
+      }
+    },
+    "/account/profile-retrieve-update-destroy": {
+      "get": {
+        "summary": "profile-retrieve",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "profile_retrieve"
+      },
+      "patch": {
+        "summary": "profile-update",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "profile_update"
+      },
+      "delete": {
+        "summary": "profile-destroy",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "profile_destroy"
+      }
+    },
+    "/account/transaction": {
+      "post": {
+        "summary": "transaction",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "operationId": "transaction"
+      }
+    }
+  },
+  "servers": [
+    {
+      "url": "http://127.0.0.1:8000"
+    }
+  ]
+}
