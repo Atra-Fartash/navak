@@ -5,6 +5,7 @@ from basket.serializers import BasketItemSerializer
 from basket.models import Basket, BasketItem, Discount
 from rest_framework import permissions
 from rest_framework.response import Response
+from django.shortcuts import render
 
 
 
@@ -89,3 +90,10 @@ class DiscountAPIView(APIView):
             'discount' : discount.code,
             'final_price' : Basket.final_price
         }, status=200)
+    
+
+def cart(request):
+    return render(request, 'cart.html')
+
+def checkout(request):
+    return render(request, 'checkout.html')

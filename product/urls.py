@@ -3,7 +3,7 @@ from product.views import (ElectronicBookListCreate, ElectronicBookDestoryUpdate
                            AudioBookDestoryUpdateRetrieve,PodcastListCreate, PodcastDestoryUpdateRetrieve, CategoryListCreate,
                            CategoryDestoryUpdateRetrieve,PublisherListCreate, PublisherDestoryUpdateRetrieve, AuthorListCreate,
                            AuthorDestoryUpdateRetrieve,TranslatorListCreate, TranslatorDestoryUpdateRetrieve, NarratorListCreate,
-                           NarratorDestoryUpdateRetrieve, CommentListCreate, CommentRetrieveUpdateDestroy)
+                           NarratorDestoryUpdateRetrieve, CommentListCreate, CommentRetrieveUpdateDestroy, product_detail, products)
 
 
 urlpatterns = [
@@ -25,4 +25,6 @@ urlpatterns = [
     path('narrator-retrieve-update-destroy/<str:pk>', NarratorDestoryUpdateRetrieve.as_view()),
     path('comment-list-create', CommentListCreate.as_view()),
     path('comment-retrieve-update-destroy/<str:pk>', CommentRetrieveUpdateDestroy.as_view()),
+    path('product-detail', product_detail),
+    path('products', products)
 ]

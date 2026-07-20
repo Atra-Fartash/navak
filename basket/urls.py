@@ -1,5 +1,5 @@
 from django.urls import path
-from basket.views import AddBasketItem, BasketItemList, DeleteBasketItem, DiscountAPIView
+from basket.views import AddBasketItem, BasketItemList, DeleteBasketItem, DiscountAPIView, cart,checkout
 
 
 
@@ -8,4 +8,6 @@ urlpatterns = [
     path('basket-item-list', BasketItemList.as_view()),
     path('delete-basket-item/<str:pk>', DeleteBasketItem.as_view()),
     path('discount/', DiscountAPIView.as_view()),
+    path('cart', cart),
+    path('checkout', checkout)
 ]

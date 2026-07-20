@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" count="width=device-width,initial-scale=1.0">
+    <title>تکمیل سفارش |نواک </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        body{
+            font-family: 'Vazirmatn',sans-serif;
+            background: linear-gradient(135deg,#677eea,#764ba2);
+            margin:0;
+            padding:20px;
+        }
+
+        .container{
+            max-width: 700px;
+            margin:40px auto;
+            background: white;
+            padding:30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        h1{
+            text-align: center;
+            color:#333;
+            margin-bottom: 30px;
+        }
+
+        .order-summary{
+            background:#f8f9fa;
+            padding:15px;
+            border-radius: 10px;
+            margin-bottom: 2opx;
+        }
+
+        label{
+            display:block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        textarea{
+            width:100%;
+            min-height: 120px;
+            padding:10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            resize:none;
+            font-family: 'Vazirmatn';
+            font-size: 14px;
+        }
+
+        .btn{
+            width:100%;
+            padding:12px;
+            margin-top: 20px;
+            border:none;
+            border-radius: 8px;
+            background: #28a745;
+            color:white;
+            font-size: 16px;
+            cursor:pointer;
+        }
+
+        .btn-hover{
+            background: #218838;
+        }
+
+        .back-btn{
+             display:inline-block;
+            margin-bottom:20px;
+            padding:10px 15px;
+            background:#007bff;
+            color:white;
+            text-decoration:none;
+            border-radius:8px;
+        }
+
+        .back-btn:hover{
+            background: #0056b3;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <a href="cart.html" class="back-btn">
+            بازگشت به سبد خرید
+        </a>
+
+        <h1>
+            تکمیل سفارش
+        </h1>
+
+        <div class="order-summary">
+            <h3 id="totalPrice">
+                مبلغ کل: 0 تومان
+            </h3>
+        </div>
+
+        <label for="address">
+            آدرس تحویل سفارش
+        </label>
+
+        <textarea
+        id="address"
+        placeholder="آدرس خود را وارد کنید...">
+    </textarea>
+
+        <button id="submitOrderBtn" class="btn">
+            ثبت سفارش
+        </button>
+    </div>
+
+    <script src="checkout.js"></script>
+</body>
+</html>

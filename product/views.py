@@ -9,6 +9,7 @@ from product.serializers import (CategorySerializer,CategoryRetrieveUpdateDestro
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters
 from rest_framework import permissions
+from django.shortcuts import render
 
 
 
@@ -148,3 +149,27 @@ class CommentRetrieveUpdateDestroy(RetrieveUpdateDestroyAPIView):
         if user.is_staff:
             return Comment.objects.all()
         return Comment.objects.filter(user=user)
+
+
+def product_detail(request):
+    electronic_books = ElectronicBook.objects.all()
+    audio_books = AudioBook.objects.all()
+    podcast = Podcast.objects.all()
+    data = {
+        'electronic_books' : electronic_books,
+        'audio_books' :  audio_books,
+        'podcast' : podcast
+    }
+    return render(request, 'product-detail.html', context=data)
+
+def products(request):
+    electronic_books = ElectronicBook.objects.all()
+    audio_books = AudioBook.objects.all()
+    podcast = Podcast.objects.all()
+    data = {
+        'electronic_books' : electronic_books,
+        'audio_books' :  audio_books,
+        'podcast' : podcast
+    }
+    return render(request, 'products.html', context=data)
+

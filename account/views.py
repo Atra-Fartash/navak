@@ -9,6 +9,7 @@ from rest_framework.response import Response
 from datetime import timedelta
 from django.utils.timezone import now
 from navak.settings import OTP_LIFETIME
+from django.shortcuts import render
 
 
 
@@ -79,3 +80,13 @@ class TransactionView(CreateAPIView):
                 else wallet_amount
             ),
         )
+
+
+def register(request):
+    return render(request, 'register.html')
+
+def index(request):
+    return render(request, 'index.html')
+
+def profile(request):
+    return render(request, 'profile.html')

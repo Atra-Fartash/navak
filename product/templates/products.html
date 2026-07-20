@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فروشگاه کتاب/محصولات  </title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"  href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family:  'Vazirmatn', sans-serif;
+            padding: 20px;
+            margin:0;
+            background-color: #f4f4f9;}
+
+        .logo-section{
+            text-align: center;
+            margin-bottom: 25px;
+
+        }
+
+        .logo-section i{
+            font-size: 60px;
+            color:#1e40af;
+            display:block;
+            margin-bottom: 10px;
+        }
+
+        .logo-section h1{
+            margin:0;
+            color:#1e40af;
+        }
+         .header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap:wrap;
+            gap:10px;}
+
+        .header-buttons{
+            display:flex;
+            align-items:center;
+            gap:25px;
+
+
+        }
+
+        .search-container{
+            position:relative;
+            width: 300px;
+            margin-bottom: 20px;
+        }
+        .search-bar{
+            width: 100%;
+            padding: 10px 40px 10px 10px ;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+           }
+
+        .search-icon{
+            position:absolute;
+             top:12px; 
+             right:12px; 
+             color:#777;
+        }
+
+       
+
+        .btn{
+            padding: 8px 15px;
+            cursor: pointer;
+            background-color: #007bff;
+            color:white;
+            border:none;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+
+        .btn-logout{
+            background-color: #dc3545;
+        }
+
+        .product-grid{ 
+            display: flex;
+             flex-wrap: wrap;
+              gap:20px;
+            }
+        .product-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            width: 220px;
+            box-shadow:  0 2px 5px rgba(0,0,0,0.1);
+             text-align: center;
+            transition: 0.3s;
+        }
+
+        .product-card:hover{
+            transform: translateY(-5px);
+        }
+
+        .product-card h3{
+            margin-top: 0;
+        }
+
+        .product-card p{
+            color:#555
+        }
+
+         .user-profile{
+            display:flex;
+            align-items: center;
+            gap:8px;
+
+            background: white;
+            padding:8px 15px;
+            border-radius: 25px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-left: 15px;
+        }
+
+        .user-profile i{
+            font-size: 28px;
+            color:#6C63FF;
+        }
+        .dark-mode{
+            background-color: #1e1e1e !important;
+            color:white !important;
+        }
+
+        .dark-mode .product-card{
+            background-color: #2d2d2d !important;
+            color:white !important;
+        }
+
+        .dark-mode .search-bar{
+            background-color: #333 !important;
+            color: white !important;
+            border:1px solid #555 !important;
+        }
+
+
+        .dark-mode h1,
+        .dark-mode h2,
+        .dark-mode h3,
+        .dark-mode p{
+            color:white !important;
+        }
+
+        .hero-banner{
+            background: linear-gradient(135deg,#c7c3ff, #8f87ff);
+            padding:30px;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .hero-banner h2{
+            color:#222;
+            margin:0 0 10px;
+
+        }
+
+        .old-price{
+    text-decoration: line-through;
+    color: gray;
+    margin: 5px 0;
+        }
+
+        .discount-price{
+    color: red;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 5px 0;
+        }
+        
+        .hero-banner p{
+            color:#444;
+            margin:0;
+            font-size: 16px;
+        }
+
+        .cart-btn{
+            position: relative;
+        }
+
+        #cart-count{
+            background: red;
+            color:white;
+            border-radius: 50%;
+            padding:2px 7px;
+            font-size:12px;
+            margin-right: 5px;
+        }
+
+         
+       
+         
+    </style>
+</head>
+
+<body>
+
+
+    <!--لوگوی نواک-->
+    <div class="logo-section">
+        <i class="fas fa-book-open"></i>
+        <h1>نواک</h1>
+    </div>
+
+    <div class="hero-banner">
+        <h2>📚 به فروشگاه کتاب نواک خوش آمدید</h2>
+        <p>مجموعه ای از بهترین کتاب های الکترونیکی و صوتی</p>
+    </div>
+
+    <!--هدر-->
+    <div class="header">
+        <h2 id="welcome-message">
+            لیست کتاب های الکترونیکی و صوتی
+        </h2>
+
+        <div class="header-right">
+
+        <a href="profile.html" class="user-profile">
+            <i class="fas fa-user-circle"></i>
+            <span id="profile-name"></span>
+        </a>
+
+
+            <a href="cart.html" class="btn cart-btn">
+
+                  🛒 سبد خرید
+                  <span id="cart-count">0</span>
+            </a>
+
+            <button id="logoutBtn" class="btn btn-logout">
+                خروج از حساب
+            </button>
+        </div>
+
+    
+    </div>
+
+
+
+    <!--نوار جستجو-->
+    <div class="search-container">
+            <input 
+            type="text" 
+            id="searchInput"
+             class="search-bar" 
+             placeholder="جستجوی نام کتاب یا نویسنده...">
+            <i class="fas fa-search search-icon"></i>
+
+
+    </div>
+
+    <!--ظرفی که محصولات با جاوا در آن قرار میگیرند-->
+
+    <div id="productContainer" class="product-grid">
+
+    </div>
+
+    <script src="products.js"></script>
+</body>
+</html>
