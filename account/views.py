@@ -1,8 +1,9 @@
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView, CreateAPIView
+from django.contrib.auth.models import User
 from rest_framework.views import APIView
 from account.serializers import TransactionSerializer, ProfileSerializer
 from account.models import Transaction, Profile, Wallet, OTP
-from rest_framework import permissions
+from rest_framework import permissions, serializers
 import random
 from django.core.cache import cache
 from rest_framework.response import Response
@@ -30,6 +31,21 @@ class ProfileRetrieveUpdateDestroy(RetrieveUpdateDestroyAPIView):
         if user.is_staff:
             return Profile.objects.all()
         return Profile.objects.filter(user=user)
+
+
+class UserRegisterSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ['username', 'email', 'password']
+        extra_kwargs = {'password' : {'write_only' : True}}
+
+    def create(self, validated_data):
+        return User.objects.create_user(**validated_data)
+
+
+class RegisterView(CreateAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserRegisterSerializer
 
 
 class GetOTP(APIView):
