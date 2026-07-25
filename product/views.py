@@ -7,8 +7,8 @@ from product.serializers import (CategorySerializer,CategoryRetrieveUpdateDestro
                                 AudioBookSerializer,AudioBookRetrieveUpdateDestroySerializer, ElectronicBookSerializer,ElectronicBookRetrieveUpdateDestroySerializer,
                                 PodcastSerializer,PodcastRetrieveUpdateDestroySerializer, CommentSerializer, CommentRetrieveUpdateDestroySerializer)
 from django_filters.rest_framework import DjangoFilterBackend
-from rest_framework import filters
-from rest_framework import permissions
+from rest_framework import filters, permissions, status
+from rest_framework.response import Response
 from django.shortcuts import render
 
 
@@ -20,6 +20,16 @@ class ElectronicBookListCreate(ListCreateAPIView):
     search_fields = ['name']
     filterset_fields = ['category']
     ordering_fields = ['price', 'score', 'page']
+
+    def list(self, request, *args, **kwargs):
+        queryset = self.get_queryset()
+
+        if not queryset.exists():
+            return Response(
+                {'message' : 'کتاب الکترونیک وجود ندارد'},
+                status=200
+            )
+        return super().list(request, *args, **kwargs)
 
 
 class ElectronicBookDestoryUpdateRetrieve(RetrieveUpdateDestroyAPIView):
@@ -37,6 +47,16 @@ class AudioBookListCreate(ListCreateAPIView):
     filterset_fields = ['category']
     ordering_fields = ['price', 'score', 'time']
 
+    def list(self, request, *args, **kwargs):
+            queryset = self.get_queryset()
+    
+            if not queryset.exists():
+                return Response(
+                    {'message' : 'کتاب صوتی وجود ندارد'},
+                    status=200
+                )
+            return super().list(request, *args, **kwargs)
+
 
 class AudioBookDestoryUpdateRetrieve(RetrieveUpdateDestroyAPIView):
     queryset = AudioBook.objects.all()
@@ -52,6 +72,16 @@ class PodcastListCreate(ListCreateAPIView):
     search_fields = ['name']
     filterset_fields = ['category']
     ordering_fields = ['price', 'score', 'time']
+
+    def list(self, request, *args, **kwargs):
+            queryset = self.get_queryset()
+    
+            if not queryset.exists():
+                return Response(
+                    {'message' : 'پادکست وجود ندارد'},
+                    status=200
+                )
+            return super().list(request, *args, **kwargs)
 
 
 class PodcastDestoryUpdateRetrieve(RetrieveUpdateDestroyAPIView):
