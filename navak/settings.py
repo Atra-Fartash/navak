@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'product',
     'basket',
     'account',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -53,6 +54,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'navak.urls'
@@ -151,3 +153,5 @@ SIMPLE_JWT = {
 }
 
 OTP_LIFETIME = 180
+
+CORS_ALLOW_ALL_ORIGINS = True
