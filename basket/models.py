@@ -16,9 +16,9 @@ class Basket(models.Model):
 
 class BasketItem(models.Model):
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
-    electronic_book = models.ForeignKey(to=ElectronicBook, on_delete=models.CASCADE)
-    audio_book = models.ForeignKey(to=AudioBook, on_delete=models.CASCADE)
-    podcast = models.ForeignKey(to=Podcast, on_delete=models.CASCADE)
+    electronic_book = models.ForeignKey(to=ElectronicBook, on_delete=models.CASCADE, null=True, blank=True)
+    audio_book = models.ForeignKey(to=AudioBook, on_delete=models.CASCADE, null=True, blank=True)
+    podcast = models.ForeignKey(to=Podcast, on_delete=models.CASCADE, null=True, blank=True)
     basket = models.ForeignKey(Basket, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
 
